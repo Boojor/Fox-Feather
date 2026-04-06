@@ -431,7 +431,7 @@ img {
 
 .ff-concept__fox-illustration {
   position: absolute;
-  left: 0;
+  left: -359px;
   bottom: -146px;
   width: 599px;
   height: 375px;
