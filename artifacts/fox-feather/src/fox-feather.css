@@ -478,9 +478,16 @@ img {
 }
 
 .ff-ticker__star {
-  color: var(--yellow);
-  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+  color: var(--green);
+  border-radius: 8px;
   flex-shrink: 0;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -831,8 +838,8 @@ img {
 }
 
 .ff-btn--footer {
-  background: var(--white);
-  color: var(--navy);
+  background: var(--green);
+  color: var(--white);
   padding: 16px 24px;
   border-radius: 16px;
   font-size: 16px;
