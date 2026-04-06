@@ -422,13 +422,13 @@ img {
   transform-origin: center;
 }
 
-.ff-flow__pill--feel-l { top: 9.79px; left: 169.68px; transform: rotate(62.37deg); }
-.ff-flow__pill--frame-l { top: 100.86px; left: 219.62px; transform: rotate(32.78deg); }
-.ff-flow__pill--act-l { top: 164.79px; left: 327.77px; transform: rotate(10.18deg); }
-.ff-flow__pill--reflect { top: 182.79px; left: 50%; transform: translateX(-50%) rotate(0deg); }
-.ff-flow__pill--act-r { top: 162.45px; right: 327.77px; transform: rotate(-12.89deg); }
-.ff-flow__pill--frame-r { top: 100.86px; right: 219.62px; transform: rotate(-30deg); }
-.ff-flow__pill--feel-r { top: 8px; right: 169.68px; transform: rotate(-75deg); }
+.ff-flow__pill--feel-l { top: 8px; left: 129.81px; transform: rotate(62.37deg); }
+.ff-flow__pill--frame-l { top: 90.10px; left: 219.62px; transform: rotate(32.78deg); }
+.ff-flow__pill--act-l { top: 152.44px; left: 327.77px; transform: rotate(10.18deg); }
+.ff-flow__pill--reflect { top: 182px; left: 50%; transform: translateX(-50%) rotate(0deg); }
+.ff-flow__pill--act-r { top: 152.44px; right: 327.77px; transform: rotate(-12.89deg); }
+.ff-flow__pill--frame-r { top: 90.10px; right: 219.62px; transform: rotate(-30deg); }
+.ff-flow__pill--feel-r { top: 8px; right: 129.81px; transform: rotate(-75deg); }
 
 .ff-concept__fox-illustration {
   position: absolute;
