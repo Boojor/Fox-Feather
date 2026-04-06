@@ -598,10 +598,14 @@ img {
   min-width: 300px;
   position: relative;
   overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .ff-about__photo img {
   width: 100%;
+  max-width: 560px;
   height: auto;
   object-fit: contain;
 }
