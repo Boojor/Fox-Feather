@@ -478,17 +478,11 @@ img {
 }
 
 .ff-ticker__star {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: 8px 12px;
-  background: var(--white);
-  color: var(--green);
-  border-radius: 8px;
+  color: var(--white);
+  font-size: 18px;
   flex-shrink: 0;
-  font-size: 16px;
   line-height: 1;
+  margin: 0 8px;
 }
 
 @keyframes ff-ticker-scroll {
