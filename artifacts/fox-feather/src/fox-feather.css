@@ -212,7 +212,7 @@ img {
 /* ============ CONCEPT SECTION ============ */
 
 .ff-concept {
-  padding: 8px 240px 48px;
+  padding: 8px 240px 78px;
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
@@ -413,7 +413,7 @@ img {
 
 .ff-concept__fox-illustration {
   position: absolute;
-  left: -359px;
+  left: -389px;
   bottom: -146px;
   width: 779px;
   height: 488px;
