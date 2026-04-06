@@ -103,7 +103,6 @@ export default function Home() {
           </div>
           <div className="ff-flow__arc-svg">
             <img src="/assets/flow-arc-line.svg" alt="" className="ff-flow__arc-layer" />
-            <img src="/assets/flow-arc.svg" alt="" className="ff-flow__arc-layer" />
           </div>
         </div>
 
