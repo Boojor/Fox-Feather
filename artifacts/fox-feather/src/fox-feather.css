@@ -599,13 +599,13 @@ img {
   position: relative;
   overflow: visible;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
 
 .ff-about__photo img {
-  width: 100%;
-  max-width: 560px;
+  width: 115%;
+  max-width: 650px;
   height: auto;
   object-fit: contain;
 }
