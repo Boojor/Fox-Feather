@@ -122,12 +122,10 @@ export default function Home() {
       <section className="ff-dark-section" id="about">
         <div className="ff-ticker">
           <div className="ff-ticker__track">
-            {[...tickerWords, ...tickerWords].map((word, i) => (
-              <span key={i}>
-                <span className="ff-ticker__item">{word}</span>
-                <span className="ff-ticker__star">&#9733;</span>
-              </span>
-            ))}
+            {[...tickerWords, ...tickerWords].flatMap((word, i) => [
+              <span key={`w-${i}`} className="ff-ticker__item">{word}</span>,
+              <span key={`d-${i}`} className="ff-ticker__dot" aria-hidden="true" />,
+            ])}
           </div>
         </div>
 
