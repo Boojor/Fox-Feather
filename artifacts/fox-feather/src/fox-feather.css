@@ -637,7 +637,6 @@ img {
   height: 340px;
   overflow: hidden;
   border-radius: 50%;
-  border: 8px solid var(--beige);
 }
 
 .ff-coming-soon__illustration img {
