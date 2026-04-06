@@ -477,14 +477,11 @@ img {
   line-height: 1.6;
 }
 
-.ff-ticker__dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--yellow);
+.ff-ticker__star {
+  color: var(--yellow);
+  font-size: 18px;
   flex-shrink: 0;
-  vertical-align: middle;
+  line-height: 1;
 }
 
 @keyframes ff-ticker-scroll {

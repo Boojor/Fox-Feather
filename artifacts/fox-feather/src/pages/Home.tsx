@@ -124,7 +124,7 @@ export default function Home() {
           <div className="ff-ticker__track">
             {[...tickerWords, ...tickerWords].flatMap((word, i) => [
               <span key={`w-${i}`} className="ff-ticker__item">{word}</span>,
-              <span key={`d-${i}`} className="ff-ticker__dot" aria-hidden="true" />,
+              <span key={`d-${i}`} className="ff-ticker__star">★</span>,
             ])}
           </div>
         </div>
