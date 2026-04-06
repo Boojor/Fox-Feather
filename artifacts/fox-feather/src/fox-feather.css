@@ -431,10 +431,11 @@ img {
 
 .ff-concept__fox-illustration {
   position: absolute;
-  left: 477px;
+  left: 0;
   bottom: -146px;
   width: 599px;
   height: 375px;
+  transform: scaleX(-1);
   pointer-events: none;
 }
 
