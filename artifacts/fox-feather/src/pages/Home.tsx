@@ -101,16 +101,9 @@ export default function Home() {
             <p>Switch between them as often as you like.</p>
             <p>The rhythm itself creates momentum.</p>
           </div>
-          <div className="ff-flow__arc">
-            <img src="/assets/flow-ellipse.svg" alt="" />
+          <div className="ff-flow__arc-svg">
+            <img src="/assets/flow-arc.svg" alt="" />
           </div>
-          <span className="ff-flow__pill ff-flow__pill--feel-l">Feel</span>
-          <span className="ff-flow__pill ff-flow__pill--frame-l">Frame</span>
-          <span className="ff-flow__pill ff-flow__pill--act-l">Act</span>
-          <span className="ff-flow__pill ff-flow__pill--reflect">Reflect</span>
-          <span className="ff-flow__pill ff-flow__pill--act-r">Act</span>
-          <span className="ff-flow__pill ff-flow__pill--frame-r">Frame</span>
-          <span className="ff-flow__pill ff-flow__pill--feel-r">Feel</span>
         </div>
 
         <div className="ff-concept__fox-illustration">
