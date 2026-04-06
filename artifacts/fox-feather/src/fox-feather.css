@@ -419,15 +419,16 @@ img {
   letter-spacing: 0.18px;
   white-space: nowrap;
   line-height: 1.6;
+  transform-origin: center;
 }
 
-.ff-flow__pill--feel-l { top: 10px; left: 130px; transform: rotate(62.37deg); }
-.ff-flow__pill--frame-l { top: 101px; left: 195px; transform: rotate(32.78deg); }
-.ff-flow__pill--act-l { top: 165px; left: 320px; transform: rotate(10.18deg); }
-.ff-flow__pill--reflect { top: 183px; left: 50%; transform: translateX(-50%); }
-.ff-flow__pill--act-r { top: 162px; right: 320px; transform: rotate(-12.89deg); }
-.ff-flow__pill--frame-r { top: 100px; right: 195px; transform: rotate(-30deg); }
-.ff-flow__pill--feel-r { top: 8px; right: 130px; transform: rotate(-75deg); }
+.ff-flow__pill--feel-l { top: 9.79px; left: 169.68px; transform: rotate(62.37deg); }
+.ff-flow__pill--frame-l { top: 100.86px; left: 219.62px; transform: rotate(32.78deg); }
+.ff-flow__pill--act-l { top: 164.79px; left: 327.77px; transform: rotate(10.18deg); }
+.ff-flow__pill--reflect { top: 182.79px; left: 50%; transform: translateX(-50%) rotate(0deg); }
+.ff-flow__pill--act-r { top: 162.45px; right: 327.77px; transform: rotate(-12.89deg); }
+.ff-flow__pill--frame-r { top: 100.86px; right: 219.62px; transform: rotate(-30deg); }
+.ff-flow__pill--feel-r { top: 8px; right: 169.68px; transform: rotate(-75deg); }
 
 .ff-concept__fox-illustration {
   position: absolute;
