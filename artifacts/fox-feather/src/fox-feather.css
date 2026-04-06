@@ -481,15 +481,14 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: auto;
+  padding: 8px 12px;
   background: var(--white);
   color: var(--green);
-  border-radius: 50%;
+  border-radius: 8px;
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
-  font-weight: 700;
 }
 
 @keyframes ff-ticker-scroll {
