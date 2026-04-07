@@ -617,7 +617,7 @@ img {
   flex: 1;
   min-width: 300px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -901,7 +901,7 @@ img {
     flex: 1;
     min-width: 0;
     height: 700px;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     display: block;
   }
