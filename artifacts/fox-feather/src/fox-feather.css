@@ -722,6 +722,7 @@ img {
 
 .ff-coming-soon__tags {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
 }
@@ -738,6 +739,7 @@ img {
   line-height: 1.4;
   letter-spacing: 0.16px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .ff-tag:hover { opacity: 0.8; }
