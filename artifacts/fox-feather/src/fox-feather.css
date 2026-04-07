@@ -981,7 +981,7 @@ img {
   .ff-about__text { flex: none; width: 100%; max-width: none; padding: 32px 20px 0; }
   .ff-about__title { font-size: 40px; line-height: 48px; }
   .ff-about__photo { order: -1; width: 100%; min-width: 0; justify-content: flex-start; height: auto; overflow: visible; display: flex; }
-  .ff-about__photo-desktop { margin-right: 0; width: 100%; max-width: none; position: static; height: auto; }
+  .ff-about__photo-desktop { display: block; margin-right: 0; width: 100%; max-width: none; position: static; height: auto; }
   .ff-about__photo-tablet { display: none; }
   .ff-about__more-details { opacity: 0; }
   .ff-about__contact-links { display: flex; flex-direction: column; gap: 4px; }
