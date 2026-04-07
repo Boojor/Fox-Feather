@@ -121,6 +121,7 @@ img {
   font-weight: 400;
   line-height: 64px;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 .ff-hero__subtitle {
@@ -189,6 +190,7 @@ img {
   font-size: 40px;
   font-weight: 900;
   line-height: 64px;
+  text-wrap: balance;
 }
 
 .ff-pillar__title--green { color: var(--green); }
@@ -246,6 +248,7 @@ img {
   font-size: 24px;
   font-weight: 700;
   line-height: 40px;
+  text-wrap: balance;
 }
 
 .ff-concept__subheading {
@@ -254,6 +257,7 @@ img {
   font-weight: 400;
   line-height: 40px;
   color: var(--navy-alt);
+  text-wrap: balance;
 }
 
 .ff-forces {
@@ -520,6 +524,7 @@ img {
   line-height: 80px;
   letter-spacing: -0.72px;
   margin-bottom: 48px;
+  text-wrap: balance;
 }
 
 .ff-about__title--yellow {
@@ -652,6 +657,7 @@ img {
   line-height: 1.2;
   color: var(--navy);
   width: 100%;
+  text-wrap: balance;
 }
 
 .ff-coming-soon__illustration {
@@ -742,6 +748,7 @@ img {
   color: var(--navy);
   line-height: 1;
   letter-spacing: -0.8px;
+  text-wrap: balance;
 }
 
 .ff-footer__social {
