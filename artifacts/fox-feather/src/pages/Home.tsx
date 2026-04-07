@@ -29,6 +29,17 @@ export default function Home() {
         <div className="ff-hero__images">
           <img className="ff-hero__image" src="/assets/hero-composed.png" alt="Creative professionals at work" />
         </div>
+        {/* Mobile-only hero banner (≤480px) */}
+        <div className="ff-hero__images--mobile">
+          <div className="ff-hero__mobile-main">
+            <div className="ff-hero__mobile-photo-mask">
+              <img src="/assets/hero-mobile-photo.png" alt="" />
+            </div>
+          </div>
+          <div className="ff-hero__mobile-circle">
+            <img src="/assets/hero-mobile-portrait.png" alt="" />
+          </div>
+        </div>
       </section>
 
       {/* PILLARS */}

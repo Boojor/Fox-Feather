@@ -143,6 +143,65 @@ img {
   display: block;
 }
 
+/* Mobile-only hero banner */
+.ff-hero__images--mobile {
+  display: none;
+  position: relative;
+  width: 100%;
+  padding-bottom: 88px;
+}
+
+.ff-hero__mobile-main {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  margin-bottom: -88px;
+}
+
+/* Positioned photo container with arch mask */
+.ff-hero__mobile-photo-mask {
+  position: absolute;
+  width: 601px;
+  height: 404px;
+  left: calc(50% + 98px);
+  transform: translateX(-50%);
+  top: -63px;
+  -webkit-mask-image: url('/assets/hero-mobile-mask.svg');
+  mask-image: url('/assets/hero-mobile-mask.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 0 63px;
+  mask-position: 0 63px;
+  -webkit-mask-size: 247px 340px;
+  mask-size: 247px 340px;
+}
+
+.ff-hero__mobile-photo-mask img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+}
+
+.ff-hero__mobile-circle {
+  width: 247px;
+  height: 247px;
+  border-radius: 50%;
+  background: #FFBAD2;
+  border: 11.6px solid white;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ff-hero__mobile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ============ PILLARS ============ */
 
 .ff-pillars {
@@ -903,6 +962,8 @@ img {
   .ff-hero { padding: 20px 20px 0; gap: 24px; }
   .ff-hero__title { font-size: 28px; line-height: 32px; }
   .ff-hero__subtitle { font-size: 14px; }
+  .ff-hero__images { display: none; }
+  .ff-hero__images--mobile { display: block; }
   .ff-pillars { flex-direction: column; padding: 24px 20px 40px; gap: 0; }
   .ff-pillar { border: none !important; border-radius: 0; padding: 24px 20px; }
   .ff-concept { padding: 8px 20px 40px; }
