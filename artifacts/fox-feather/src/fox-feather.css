@@ -695,7 +695,7 @@ img {
   font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 1.2;
   color: var(--navy);
   width: 100%;
 }
