@@ -1009,6 +1009,10 @@ img {
   .ff-about__contact-separator { display: none; }
   .ff-coming-soon { padding: 48px 20px 64px; }
   .ff-footer__main { flex-direction: column; padding: 40px 20px 32px; gap: 32px; }
+  .ff-footer__left { display: contents; }
+  .ff-footer__left-content { order: 1; }
+  .ff-footer__right { order: 2; }
+  .ff-footer__social { order: 3; }
   .ff-footer__title { font-size: 28px; }
   .ff-footer__form-row { flex-direction: column; height: auto; }
   .ff-form-group--half { width: 100%; }
