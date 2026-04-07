@@ -944,7 +944,21 @@ img {
   .ff-nav { gap: 16px; }
   .ff-nav a { font-size: 12px; }
   .ff-nav-link:not(.ff-nav-link--bold) { display: none; }
-  .ff-nav-link--bold { white-space: nowrap; }
+  .ff-nav-link--bold {
+    white-space: nowrap;
+    background: var(--navy);
+    color: var(--white);
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .ff-nav-link--bold:hover {
+    color: var(--white);
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
   .ff-hero { padding: 20px 20px 0; gap: 24px; }
   .ff-hero__title { font-size: 28px; line-height: 32px; }
   .ff-hero__subtitle { font-size: 14px; }
