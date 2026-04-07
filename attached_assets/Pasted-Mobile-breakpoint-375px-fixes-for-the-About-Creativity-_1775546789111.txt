@@ -1,0 +1,34 @@
+Mobile breakpoint (375px) fixes for the About / "Creativity as Resilience" section:
+
+Comparing the current code to the Figma design (node 412:2800), these issues need fixing:
+
+1. Photo collage order and sizing
+
+Figma: Photo collage appears ABOVE the heading "Creativity as Resilience", centered horizontally, and is roughly 375px wide by 700px tall. It bleeds slightly to the right edge.
+Current: Photo appears above heading (correct order) but may not be sized correctly.
+Fix: On mobile (max-width: 480px), .about__photo should have width: 100%, height: auto, and min-width: 0. The image should display at its natural aspect ratio. The container should be overflow: visible so the botanical elements (leaves, feathers) can extend slightly beyond the edges.
+2. Heading "Creativity as Resilience" size
+
+Figma: 40px font size, Inter Black (weight 900)
+Fix: At mobile breakpoint, .about__title should be font-size: 40px; line-height: 48px;
+3. "More details" link should be hidden on mobile
+
+Figma: The "More details" link has opacity: 0 on mobile (it's invisible)
+Fix: At mobile breakpoint, .about__more-details { display: none; } or opacity: 0
+4. Body text should have left padding matching the heading
+
+Figma: Text content has ~32px left/right padding within the navy section
+Fix: .about__inner on mobile should have padding: 32px 32px 0 (not 20px)
+5. "Direct contact" and email links
+
+Figma: Email links stack vertically (Anna@ff.com on one line, Orly@ff.com below), no pipe separator
+Figma: Font size stays 24px, yellow color (#EAFF00)
+Fix: .about__contact-links on mobile should be display: flex; flex-direction: column; gap: 4px;. Hide any pipe separator element.
+6. CTA button
+
+Figma: Green button with "Register for Updates", 16px bold, 24px padding, 16px border-radius
+Verify: Button should match these specs at mobile
+7. Overall section spacing
+
+Figma: The about section has minimal bottom padding after the contact info, then the photo appears, followed by more navy space
+Fix: Reduce any excessive bottom padding on .about at mobile. Use padding-bottom: 48px or less.

@@ -493,7 +493,7 @@ img {
   background: var(--navy);
   color: var(--white);
   padding: 0 0 96px;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .ff-about__inner {
@@ -503,6 +503,7 @@ img {
   display: flex;
   gap: 48px;
   align-items: flex-start;
+  overflow: visible;
 }
 
 .ff-about__text {
@@ -614,6 +615,7 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-right: -64px;
 }
 
 .ff-about__photo-desktop {
@@ -621,6 +623,7 @@ img {
   max-width: 650px;
   height: auto;
   object-fit: contain;
+  object-position: left center;
   flex-shrink: 0;
 }
 
@@ -897,6 +900,7 @@ img {
     overflow: visible;
     position: relative;
     display: block;
+    margin-right: -32px;
   }
   .ff-about__photo-desktop { display: none; }
   .ff-about__photo-tablet {
@@ -973,7 +977,7 @@ img {
   .ff-about__inner { flex-direction: column; padding: 0; gap: 0; }
   .ff-about__text { flex: none; width: 100%; max-width: none; padding: 32px 20px 0; }
   .ff-about__title { font-size: 40px; line-height: 48px; }
-  .ff-about__photo { order: -1; width: 100%; min-width: 0; height: 560px; overflow: hidden; position: relative; display: block; }
+  .ff-about__photo { order: -1; width: 100%; min-width: 0; height: 560px; overflow: hidden; position: relative; display: block; margin-right: 0; }
   .ff-about__photo-desktop { display: none; }
   .ff-about__photo-tablet { display: block; position: absolute; width: 143.21%; height: 126.14%; left: 0; top: -2.29%; max-width: none; object-fit: cover; }
   .ff-about__more-details { opacity: 0; }
