@@ -873,6 +873,49 @@ img {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.ff-btn--footer:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ff-footer__form-error {
+  font-size: 14px;
+  color: #e05b5b;
+  margin-top: 4px;
+}
+
+.ff-footer__thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.ff-footer__thankyou-icon {
+  font-size: 32px;
+  color: var(--green);
+  line-height: 1;
+}
+
+.ff-footer__thankyou-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ff-footer__thankyou-text {
+  font-size: 16px;
+  color: var(--navy);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 360px;
+}
+
 .ff-footer__bottom {
   background: var(--green);
   padding: 16px 24px;

@@ -1,9 +1,95 @@
+import { useState } from "react";
 import "../fox-feather.css";
+
+// TODO: Replace with the real destination email address
+const CONTACT_EMAIL = "hello@foxandfeather.com";
 
 const tickerWords = [
   "Perseverance", "Curiosity", "Reinvention", "Resilience",
   "Imagination", "Awareness", "Transformation", "Possibility", "The Hunt",
 ];
+
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("sending");
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      const data = await res.json();
+      if (data.success === "true" || data.success === true) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="ff-footer__thankyou">
+        <div className="ff-footer__thankyou-icon">✦</div>
+        <h3 className="ff-footer__thankyou-title">Thank you!</h3>
+        <p className="ff-footer__thankyou-text">We received your message and will be in touch shortly.</p>
+        <button
+          className="ff-btn--footer"
+          onClick={() => { setName(""); setEmail(""); setMessage(""); setStatus("idle"); }}
+        >
+          Send another message
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <form className="ff-footer__form" onSubmit={handleSubmit}>
+      <div className="ff-footer__form-row">
+        <div className="ff-form-group ff-form-group--half">
+          <label>Full name <span className="ff-required">*</span></label>
+          <input
+            type="text"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="ff-form-group ff-form-group--half">
+          <label>Email <span className="ff-required">*</span></label>
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="ff-form-group ff-form-group--full">
+        <label>How can we help?</label>
+        <textarea
+          placeholder="Input your question here"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+      {status === "error" && (
+        <p className="ff-footer__form-error">Something went wrong. Please try again or email us directly.</p>
+      )}
+      <button type="submit" className="ff-btn--footer" disabled={status === "sending"}>
+        {status === "sending" ? "Sending…" : "Send"}
+      </button>
+    </form>
+  );
+}
 
 export default function Home() {
   return (
@@ -180,35 +266,19 @@ export default function Home() {
               <h2 className="ff-footer__title">Drop us a line</h2>
             </div>
             <div className="ff-footer__social">
-              <a href="#" className="ff-social-icon" aria-label="Facebook">
+              <a href="https://www.facebook.com/foxandfeather" target="_blank" rel="noopener noreferrer" className="ff-social-icon" aria-label="Facebook">
                 <img src="/assets/social-facebook.svg" alt="Facebook" />
               </a>
-              <a href="#" className="ff-social-icon" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/fox-and-feather" target="_blank" rel="noopener noreferrer" className="ff-social-icon" aria-label="LinkedIn">
                 <img src="/assets/social-linkedin.svg" alt="LinkedIn" />
               </a>
-              <a href="#" className="ff-social-icon" aria-label="Instagram">
+              <a href="https://www.instagram.com/foxandfeather" target="_blank" rel="noopener noreferrer" className="ff-social-icon" aria-label="Instagram">
                 <img src="/assets/social-instagram.svg" alt="Instagram" />
               </a>
             </div>
           </div>
           <div className="ff-footer__right">
-            <form className="ff-footer__form" onSubmit={(e) => e.preventDefault()}>
-              <div className="ff-footer__form-row">
-                <div className="ff-form-group ff-form-group--half">
-                  <label>Full name <span className="ff-required">*</span></label>
-                  <input type="text" required />
-                </div>
-                <div className="ff-form-group ff-form-group--half">
-                  <label>Email <span className="ff-required">*</span></label>
-                  <input type="email" required />
-                </div>
-              </div>
-              <div className="ff-form-group ff-form-group--full">
-                <label>How can we help?</label>
-                <textarea placeholder="Input your question here" />
-              </div>
-              <button type="submit" className="ff-btn--footer">Send</button>
-            </form>
+            <ContactForm />
           </div>
         </div>
         <div className="ff-footer__bottom">
