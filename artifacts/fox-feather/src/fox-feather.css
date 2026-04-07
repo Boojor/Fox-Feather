@@ -952,9 +952,7 @@ img {
   .ff-hero__images { display: none; }
   .ff-hero__images--mobile {
     display: block;
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+    width: 100%;
   }
   .ff-pillars { flex-direction: column; padding: 24px 20px 40px; gap: 0; }
   .ff-pillar {
