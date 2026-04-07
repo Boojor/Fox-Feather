@@ -724,11 +724,11 @@ img {
 .ff-footer__left-content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 .ff-footer__eyebrow {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
   color: var(--navy);
