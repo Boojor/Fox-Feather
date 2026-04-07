@@ -975,7 +975,17 @@ img {
   .ff-hero__images { display: none; }
   .ff-hero__images--mobile { display: block; }
   .ff-pillars { flex-direction: column; padding: 24px 20px 40px; gap: 0; }
-  .ff-pillar { border: none !important; border-radius: 0; padding: 24px 20px; }
+  .ff-pillar {
+    border-left: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+    border-top: 1px solid var(--green);
+    border-bottom: none;
+    border-radius: 0;
+    padding: 16px 20px;
+  }
+  .ff-pillar--middle { border: none; border-left: 1px solid var(--green); border-right: 1px solid var(--green); border-top: 1px solid var(--green); }
+  .ff-pillar:first-child { border-left: 1px solid var(--green); }
+  .ff-pillar:last-child { border-right: 1px solid var(--green); border-bottom: 1px solid var(--green); }
   .ff-concept { padding: 8px 20px 40px; }
   .ff-forces { flex-direction: column; }
   .ff-forces__arrow { transform: rotate(90deg); }
