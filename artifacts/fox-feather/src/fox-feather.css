@@ -859,6 +859,7 @@ img {
   font-family: 'Inter', sans-serif;
   border: none;
   cursor: pointer;
+  margin-top: 16px;
   letter-spacing: 0.16px;
   line-height: 1.4;
   text-align: center;
