@@ -173,16 +173,9 @@ img {
   align-self: stretch;
 }
 
-.ff-pillar:first-child {
-  border-left: 1px solid var(--green);
-}
-
-.ff-pillar:last-child {
-  border-right: 1px solid var(--green);
-}
-
 .ff-pillar--middle {
-  border: 1px solid var(--green);
+  border-left: 1px solid var(--green);
+  border-right: 1px solid var(--green);
 }
 
 .ff-pillar__header {
