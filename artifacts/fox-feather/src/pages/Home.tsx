@@ -106,7 +106,7 @@ export default function Home() {
             <p>The rhythm itself creates momentum.</p>
           </div>
           <div className="ff-flow__arc-svg">
-            <img src="/assets/flow-connector.svg" alt="" className="ff-flow__arc-layer" />
+            <img src="/assets/flow-pills.svg" alt="" className="ff-flow__arc-layer" />
           </div>
         </div>
 
