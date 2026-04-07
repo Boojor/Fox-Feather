@@ -315,6 +315,7 @@ img {
   display: flex;
   justify-content: center;
   position: relative;
+  isolation: isolate;
 }
 
 .ff-move {
