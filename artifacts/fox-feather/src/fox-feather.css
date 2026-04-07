@@ -990,9 +990,11 @@ img {
   .ff-footer__main { flex-direction: column; padding: 40px 20px 32px; gap: 32px; }
   .ff-footer__left { display: contents; }
   .ff-footer__left-content { order: 1; }
-  .ff-footer__right { order: 2; }
+  .ff-footer__right { order: 2; width: 100%; }
   .ff-footer__social { order: 3; }
-  .ff-footer__title { font-size: 28px; }
-  .ff-footer__form-row { flex-direction: column; height: auto; }
-  .ff-form-group--half { width: 100%; }
+  .ff-footer__title { font-size: 28px; order: -1; }
+  .ff-footer__eyebrow { order: 0; }
+  .ff-footer__form { width: 100%; }
+  .ff-footer__form-row { flex-direction: column; height: auto; width: 100%; }
+  .ff-form-group--half { width: 100%; flex: none; }
 }
