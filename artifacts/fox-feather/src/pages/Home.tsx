@@ -150,7 +150,8 @@ export default function Home() {
               </div>
             </div>
             <div className="ff-about__photo">
-              <img src="/assets/about-photo.png" alt="Anna Axenov and Orly Boojor" />
+              <img className="ff-about__photo-desktop" src="/assets/about-photo.png" alt="Anna Axenov and Orly Boojor" />
+              <img className="ff-about__photo-tablet" src="/assets/about-photo-tablet.png" alt="Anna Axenov and Orly Boojor" />
             </div>
           </div>
         </div>
