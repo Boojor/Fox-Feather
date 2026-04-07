@@ -959,6 +959,8 @@ img {
   .ff-header { padding: 16px 20px; }
   .ff-nav { gap: 16px; }
   .ff-nav a { font-size: 12px; }
+  .ff-nav-link:not(.ff-nav-link--bold) { display: none; }
+  .ff-nav-link--bold { white-space: nowrap; }
   .ff-hero { padding: 20px 20px 0; gap: 24px; }
   .ff-hero__title { font-size: 28px; line-height: 32px; }
   .ff-hero__subtitle { font-size: 14px; }
