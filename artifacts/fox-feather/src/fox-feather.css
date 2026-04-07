@@ -314,7 +314,6 @@ img {
 .ff-moves__container {
   display: flex;
   justify-content: center;
-  padding-right: 24px;
   position: relative;
 }
 
