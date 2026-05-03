@@ -1,0 +1,43 @@
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # lets you trigger manually from GitHub UI
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build site
+        run: PORT=3000 BASE_PATH=/ pnpm --filter @workspace/fox-feather build
+
+      - name: Deploy to Hetzner via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.HETZNER_HOST }}
+          username: ${{ secrets.HETZNER_USER }}
+          password: ${{ secrets.HETZNER_PASS }}
+          port: 22
+          local_path: './artifacts/fox-feather/dist/public/*'
+          remote_path: ${{ secrets.HETZNER_PATH }}
+          sftp_only: true
+          delete_remote_files: false
