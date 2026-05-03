@@ -30,13 +30,17 @@ jobs:
       - name: Build site
         run: PORT=3000 BASE_PATH=/ pnpm --filter @workspace/fox-feather build
 
-      - name: Deploy to Hetzner via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HETZNER_HOST }}
-          username: ${{ secrets.HETZNER_USER }}
-          password: ${{ secrets.HETZNER_PASS }}
-          protocol: ftps
-          port: 21
-          local-dir: ./artifacts/fox-feather/dist/public/
-          server-dir: ${{ secrets.HETZNER_PATH }}
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy to Hetzner via SFTP (lftp mirror)
+        env:
+          SFTP_HOST: ${{ secrets.HETZNER_HOST }}
+          SFTP_USER: ${{ secrets.HETZNER_USER }}
+          LFTP_PASSWORD: ${{ secrets.HETZNER_PASS }}
+          SFTP_PATH: ${{ secrets.HETZNER_PATH }}
+        run: |
+          lftp \
+            -u "$SFTP_USER" --env-password \
+            -e "set sftp:auto-confirm yes; set net:max-retries 3; set net:timeout 30; mirror -R --parallel=4 --verbose ./artifacts/fox-feather/dist/public/ \"$SFTP_PATH\"; bye" \
+            "sftp://$SFTP_HOST"
