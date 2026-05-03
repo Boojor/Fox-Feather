@@ -30,14 +30,13 @@ jobs:
       - name: Build site
         run: PORT=3000 BASE_PATH=/ pnpm --filter @workspace/fox-feather build
 
-      - name: Deploy to Hetzner via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Deploy to Hetzner via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.HETZNER_HOST }}
           username: ${{ secrets.HETZNER_USER }}
           password: ${{ secrets.HETZNER_PASS }}
-          port: 22
-          local_path: './artifacts/fox-feather/dist/public/*'
-          remote_path: ${{ secrets.HETZNER_PATH }}
-          sftp_only: true
-          delete_remote_files: false
+          protocol: ftps
+          port: 21
+          local-dir: ./artifacts/fox-feather/dist/public/
+          server-dir: ${{ secrets.HETZNER_PATH }}
